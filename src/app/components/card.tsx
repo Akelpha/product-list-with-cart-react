@@ -1,5 +1,5 @@
 import React from "react";
-import "./public/assets/images/icon-add-to-cart.svg"
+
 const data = [
     {
         image: {
@@ -104,7 +104,7 @@ const data = [
 
 function Button() {
     return (
-        <button type="button"><span></span>Add To Cart</button>
+        <button type="button"><span><img src="./assets/images/icon-cart.svg" alt="Cart icon" /></span>Add To Cart</button>
     )
 }
 export default function Card(data: { image: { thumbnail: string }; category: string; name: string; price: number }) {
