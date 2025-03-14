@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Userh/github-classroom/personalWorks/product-list-with-cart-react/src/app/layout.tsx"],"sourcesContent":["import React from 'react'\r\nexport default function RootLayout({\r\n    children,\r\n}: {\r\n    children: React.ReactNode\r\n}) {\r\n    return (\r\n        <html lang=\"en\">\r\n            <body>{children}</body>\r\n        </html>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AACe,SAAS,WAAW,EAC/B,QAAQ,EAGX;IACG,qBACI,8OAAC;QAAK,MAAK;kBACP,cAAA,8OAAC;sBAAM;;;;;;;;;;;AAGnB","debugId":null}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/Userh/github-classroom/personalWorks/product-list-with-cart-react/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,4HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
+}
