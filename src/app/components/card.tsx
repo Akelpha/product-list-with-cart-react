@@ -104,16 +104,21 @@ const data = [
 
 function Button() {
     return (
-        <button type="button"><span><img src="./assets/images/icon-cart.svg" alt="Cart icon" /></span>Add To Cart</button>
+        <button type="button">Add To Cart</button>
     )
 }
-export default function Card(data: { image: { thumbnail: string }; category: string; name: string; price: number }) {
+export default function Card() {
     return (
-        <div key={data.name}>
-            <img src={data.image.thumbnail || data.image.mobile} alt="Dessert's image" />
-            <p>{data.category}</p>
-            <h2>{data.name}</h2>
-            <p>{data.price}</p>
+        <div>
+            {data.map((item, index) => (
+                <div key={index}>
+                    <img src={item.image.desktop} alt={`${item.name} desktop`} />
+                    <p>{item.category}</p>
+                    <h2>{item.name}</h2>
+                    <p>${item.price.toFixed(2)}</p>
+                    <Button />
+                </div>
+            ))}
         </div>
-    )
+    );
 }
