@@ -110,7 +110,7 @@ function Button() {
 export default function Card(data: { image: { thumbnail: string }; category: string; name: string; price: number }) {
     return (
         <div key={data.name}>
-            <img src={data.image.thumbnail} alt="Dessert's image" />
+            <img src={data.image.thumbnail || data.image.mobile} alt="Dessert's image" />
             <p>{data.category}</p>
             <h2>{data.name}</h2>
             <p>{data.price}</p>
