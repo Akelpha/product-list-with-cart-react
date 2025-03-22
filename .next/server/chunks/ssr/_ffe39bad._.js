@@ -31,7 +31,7 @@ const data = [
         },
         name: "Waffle with Berries",
         category: "Waffle",
-        price: 6.50
+        price: 6.5
     },
     {
         image: {
@@ -42,7 +42,7 @@ const data = [
         },
         name: "Vanilla Bean Crème Brûlée",
         category: "Crème Brûlée",
-        price: 7.00
+        price: 7.0
     },
     {
         image: {
@@ -53,7 +53,7 @@ const data = [
         },
         name: "Macaron Mix of Five",
         category: "Macaron",
-        price: 8.00
+        price: 8.0
     },
     {
         image: {
@@ -64,7 +64,7 @@ const data = [
         },
         name: "Classic Tiramisu",
         category: "Tiramisu",
-        price: 5.50
+        price: 5.5
     },
     {
         image: {
@@ -75,7 +75,7 @@ const data = [
         },
         name: "Pistachio Baklava",
         category: "Baklava",
-        price: 4.00
+        price: 4.0
     },
     {
         image: {
@@ -86,7 +86,7 @@ const data = [
         },
         name: "Lemon Meringue Pie",
         category: "Pie",
-        price: 5.00
+        price: 5.0
     },
     {
         image: {
@@ -97,7 +97,7 @@ const data = [
         },
         name: "Red Velvet Cake",
         category: "Cake",
-        price: 4.50
+        price: 4.5
     },
     {
         image: {
@@ -108,7 +108,7 @@ const data = [
         },
         name: "Salted Caramel Brownie",
         category: "Brownie",
-        price: 4.50
+        price: 4.5
     },
     {
         image: {
@@ -119,71 +119,77 @@ const data = [
         },
         name: "Vanilla Panna Cotta",
         category: "Panna Cotta",
-        price: 6.50
+        price: 6.5
     }
 ];
 function Button() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         type: "button",
-        className: "border rounded-xl",
+        className: "border rounded-xl w-[100%] h-[100%] border-rose-500 focus:bg-red",
         children: "Add To Cart"
     }, void 0, false, {
         fileName: "[project]/src/app/components/card.tsx",
         lineNumber: 107,
-        columnNumber: 9
+        columnNumber: 5
     }, this);
 }
 function Card() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: data.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: item.image.desktop,
-                        alt: `${item.name} desktop`
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/card.tsx",
-                        lineNumber: 115,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        children: item.category
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/card.tsx",
-                        lineNumber: 116,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        children: item.name
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/card.tsx",
-                        lineNumber: 117,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        children: [
-                            "$",
-                            item.price.toFixed(2)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/components/card.tsx",
-                        lineNumber: 118,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {}, void 0, false, {
-                        fileName: "[project]/src/app/components/card.tsx",
-                        lineNumber: 119,
-                        columnNumber: 21
-                    }, this)
-                ]
-            }, index, true, {
-                fileName: "[project]/src/app/components/card.tsx",
-                lineNumber: 114,
-                columnNumber: 17
-            }, this))
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: data.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: item.image.desktop,
+                            alt: `${item.name} desktop`
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/card.tsx",
+                            lineNumber: 120,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {}, void 0, false, {
+                            fileName: "[project]/src/app/components/card.tsx",
+                            lineNumber: 121,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: item.category
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/card.tsx",
+                            lineNumber: 122,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            children: item.name
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/card.tsx",
+                            lineNumber: 123,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            children: [
+                                "$",
+                                item.price.toFixed(2)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/components/card.tsx",
+                            lineNumber: 124,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, index, true, {
+                    fileName: "[project]/src/app/components/card.tsx",
+                    lineNumber: 119,
+                    columnNumber: 11
+                }, this))
+        }, void 0, false, {
+            fileName: "[project]/src/app/components/card.tsx",
+            lineNumber: 117,
+            columnNumber: 7
+        }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/components/card.tsx",
-        lineNumber: 112,
-        columnNumber: 9
+        lineNumber: 116,
+        columnNumber: 5
     }, this);
 }
 }}),
@@ -207,12 +213,52 @@ function Page() {
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
                 lineNumber: 7,
-                columnNumber: 13
+                columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        fileName: "[project]/src/app/page.tsx",
+                        lineNumber: 9,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "font-[11px]  text-center",
+                        children: [
+                            "Challenge by",
+                            " ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://www.frontendmentor.io?ref=challenge",
+                                className: "text-[#3e52a3]",
+                                children: "Frontend Mentor"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/page.tsx",
+                                lineNumber: 12,
+                                columnNumber: 11
+                            }, this),
+                            ". Coded by",
+                            " ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://www.frontendmentor.io/profile/Akelpha",
+                                className: "text-[#3e52a3]",
+                                children: "Akelpha"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/page.tsx",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, this),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/page.tsx",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/page.tsx",
                 lineNumber: 8,
-                columnNumber: 13
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true);
