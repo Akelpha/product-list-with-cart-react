@@ -104,7 +104,7 @@ const data = [
 
 function Button() {
     return (
-        <button type="button">Add To Cart</button>
+        <button type="button" className="border rounded-xl bg-">Add To Cart</button>
     )
 }
 export default function Card() {
