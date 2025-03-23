@@ -106,15 +106,20 @@ function Button() {
   return (
     <button
       type="button"
-      className="border rounded-xl w-[100%] h-[100%] border-rose-500 focus:bg-red">
+      className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center">
+      <span>
+        {" "}
+        <img src="./assets/images/icon-add-to-cart.svg" alt="icon" />
+      </span>
       Add To Cart
     </button>
   );
 }
 export default function Card() {
   return (
-    <div>
-      <div>
+    <div className="container mx-auto">
+      <h1 className="text-2xl">Desserts</h1>
+      <div className="grid grid-cols-3 gap-4">
         {data.map((item, index) => (
           <div key={index}>
             <img src={item.image.desktop} alt={`${item.name} desktop`} />
