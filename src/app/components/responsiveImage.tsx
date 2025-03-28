@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import { useEffect } from "react";
 import useMedia from "use-media";
 
 interface ResponsiveImageProps {
@@ -28,5 +28,13 @@ export default function ResponsiveImage({ src, alt }: ResponsiveImageProps) {
     imageSrc = src.desktop;
   }
 
-  return <Image src={imageSrc} alt={alt} layout="responsive" />;
+  return (
+    <Image
+      src={imageSrc}
+      alt={alt}
+      width={300}
+      height={300}
+      className="object-cover rounded-2xl"
+    />
+  );
 }

@@ -1,10 +1,12 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
     images: {
-        localPatterns: [
+        remotePatterns: [
             {
-                pathname: './assets/**',
-                search: '',
-            }
+                protocol: 'https',
+                hostname: '**',
+            },
         ],
+        domains: [], // Si tu as des images hébergées ailleurs
     },
-}
+};
