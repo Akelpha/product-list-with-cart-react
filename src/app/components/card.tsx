@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import addToCart from "./assets/images/icon-add-to-cart.svg";
+
 const data = [
   {
     image: {
-      thumbnail: "./assets/images/image-waffle-thumbnail.jpg",
-      mobile: "./assets/images/image-waffle-mobile.jpg",
-      tablet: "./assets/images/image-waffle-tablet.jpg",
-      desktop: "./assets/images/image-waffle-desktop.jpg",
+      thumbnail: "/image-waffle-thumbnail.jpg",
+      mobile: "/image-waffle-mobile.jpg",
+      tablet: "/image-waffle-tablet.jpg",
+      desktop: "/image-waffle-desktop.jpg",
     },
     name: "Waffle with Berries",
     category: "Waffle",
@@ -15,10 +15,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-creme-brulee-thumbnail.jpg",
-      mobile: "./assets/images/image-creme-brulee-mobile.jpg",
-      tablet: "./assets/images/image-creme-brulee-tablet.jpg",
-      desktop: "./assets/images/image-creme-brulee-desktop.jpg",
+      thumbnail: "/image-creme-brulee-thumbnail.jpg",
+      mobile: "/image-creme-brulee-mobile.jpg",
+      tablet: "/image-creme-brulee-tablet.jpg",
+      desktop: "/image-creme-brulee-desktop.jpg",
     },
     name: "Vanilla Bean Crème Brûlée",
     category: "Crème Brûlée",
@@ -26,10 +26,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-macaron-thumbnail.jpg",
-      mobile: "./assets/images/image-macaron-mobile.jpg",
-      tablet: "./assets/images/image-macaron-tablet.jpg",
-      desktop: "./assets/images/image-macaron-desktop.jpg",
+      thumbnail: "/image-macaron-thumbnail.jpg",
+      mobile: "/image-macaron-mobile.jpg",
+      tablet: "/image-macaron-tablet.jpg",
+      desktop: "/image-macaron-desktop.jpg",
     },
     name: "Macaron Mix of Five",
     category: "Macaron",
@@ -37,10 +37,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-tiramisu-thumbnail.jpg",
-      mobile: "./assets/images/image-tiramisu-mobile.jpg",
-      tablet: "./assets/images/image-tiramisu-tablet.jpg",
-      desktop: "./assets/images/image-tiramisu-desktop.jpg",
+      thumbnail: "/image-tiramisu-thumbnail.jpg",
+      mobile: "/image-tiramisu-mobile.jpg",
+      tablet: "/image-tiramisu-tablet.jpg",
+      desktop: "/image-tiramisu-desktop.jpg",
     },
     name: "Classic Tiramisu",
     category: "Tiramisu",
@@ -48,10 +48,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-baklava-thumbnail.jpg",
-      mobile: "./assets/images/image-baklava-mobile.jpg",
-      tablet: "./assets/images/image-baklava-tablet.jpg",
-      desktop: "./assets/images/image-baklava-desktop.jpg",
+      thumbnail: "/image-baklava-thumbnail.jpg",
+      mobile: "/image-baklava-mobile.jpg",
+      tablet: "/image-baklava-tablet.jpg",
+      desktop: "/image-baklava-desktop.jpg",
     },
     name: "Pistachio Baklava",
     category: "Baklava",
@@ -59,10 +59,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-meringue-thumbnail.jpg",
-      mobile: "./assets/images/image-meringue-mobile.jpg",
-      tablet: "./assets/images/image-meringue-tablet.jpg",
-      desktop: "./assets/images/image-meringue-desktop.jpg",
+      thumbnail: "/image-meringue-thumbnail.jpg",
+      mobile: "/image-meringue-mobile.jpg",
+      tablet: "/image-meringue-tablet.jpg",
+      desktop: "/image-meringue-desktop.jpg",
     },
     name: "Lemon Meringue Pie",
     category: "Pie",
@@ -70,10 +70,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-cake-thumbnail.jpg",
-      mobile: "./assets/images/image-cake-mobile.jpg",
-      tablet: "./assets/images/image-cake-tablet.jpg",
-      desktop: "./assets/images/image-cake-desktop.jpg",
+      thumbnail: "/image-cake-thumbnail.jpg",
+      mobile: "/image-cake-mobile.jpg",
+      tablet: "/image-cake-tablet.jpg",
+      desktop: "/image-cake-desktop.jpg",
     },
     name: "Red Velvet Cake",
     category: "Cake",
@@ -81,10 +81,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-brownie-thumbnail.jpg",
-      mobile: "./assets/images/image-brownie-mobile.jpg",
-      tablet: "./assets/images/image-brownie-tablet.jpg",
-      desktop: "./assets/images/image-brownie-desktop.jpg",
+      thumbnail: "/image-brownie-thumbnail.jpg",
+      mobile: "/image-brownie-mobile.jpg",
+      tablet: "/image-brownie-tablet.jpg",
+      desktop: "/image-brownie-desktop.jpg",
     },
     name: "Salted Caramel Brownie",
     category: "Brownie",
@@ -92,10 +92,10 @@ const data = [
   },
   {
     image: {
-      thumbnail: "./assets/images/image-panna-cotta-thumbnail.jpg",
-      mobile: "./assets/images/image-panna-cotta-mobile.jpg",
-      tablet: "./assets/images/image-panna-cotta-tablet.jpg",
-      desktop: "./assets/images/image-panna-cotta-desktop.jpg",
+      thumbnail: "/image-panna-cotta-thumbnail.jpg",
+      mobile: "/image-panna-cotta-mobile.jpg",
+      tablet: "/image-panna-cotta-tablet.jpg",
+      desktop: "/image-panna-cotta-desktop.jpg",
     },
     name: "Vanilla Panna Cotta",
     category: "Panna Cotta",
@@ -109,7 +109,7 @@ function Button() {
       type="button"
       className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
       <span>
-        <img src={addToCart} alt="icon" />
+        <img src="./icon-add-to-cart.svg" alt="icon" />
       </span>
       Add To Cart
     </button>
@@ -124,7 +124,7 @@ export default function DessertsCard() {
           <div key={index}>
             <section className="relative flex justify-center items-center">
               <Image
-                alt="`image-${item.name}`"
+                alt={`image-${item.name}`}
                 src={item.image.thumbnail}
                 sizes="100vw"
                 width={300}
