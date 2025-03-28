@@ -1,10 +1,11 @@
 import React from "react";
-import DessertsCard from "./components/card";
-
+import DessertsCard from "./components/dessertCart";
+import CommandCart from "./components/commandCart";
 export default function Page() {
   return (
     <>
       <DessertsCard />
+      <CommandCart />
       <div className="font-[11px]  text-center">
         Challenge by{" "}
         <a
