@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-
+import { useEffect } from "react";
+import ResponsiveImage from "./responsiveImage";
 const data = [
   {
     image: {
@@ -123,13 +123,7 @@ export default function DessertsCard() {
         {data.map((item, index) => (
           <div key={index}>
             <section className="relative flex justify-center items-center">
-              <Image
-                alt={`image-${item.name}`}
-                src={item.image.thumbnail}
-                sizes="100vw"
-                width={300}
-                height={300}
-              />
+              <ResponsiveImage src={item.image} alt={item.name} />
               <Button />
             </section>
 
