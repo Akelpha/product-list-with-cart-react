@@ -1,5 +1,6 @@
 import React from "react";
-
+import Image from "next/image";
+import addToCart from "./assets/images/icon-add-to-cart.svg";
 const data = [
   {
     image: {
@@ -106,27 +107,35 @@ function Button() {
   return (
     <button
       type="button"
-      className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center">
+      className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
       <span>
-        {" "}
-        <img src="./assets/images/icon-add-to-cart.svg" alt="icon" />
+        <img src={addToCart} alt="icon" />
       </span>
       Add To Cart
     </button>
   );
 }
-export default function Card() {
+export default function DessertsCard() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl">Desserts</h1>
+      <h1 className="text-2xl font-bold text-rose-900">Desserts</h1>
       <div className="grid grid-cols-3 gap-4">
         {data.map((item, index) => (
           <div key={index}>
-            <img src={item.image.desktop} alt={`${item.name} desktop`} />
-            <Button />
+            <section className="relative flex justify-center items-center">
+              <Image
+                alt="`image-${item.name}`"
+                src={item.image.thumbnail}
+                sizes="100vw"
+                width={300}
+                height={300}
+              />
+              <Button />
+            </section>
+
             <p>{item.category}</p>
             <h2>{item.name}</h2>
-            <p>${item.price.toFixed(2)}</p>
+            <p>${item.price}</p>
           </div>
         ))}
       </div>

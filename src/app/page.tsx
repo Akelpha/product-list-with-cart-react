@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "./components/card";
+import DessertsCard from "./components/card";
 
 export default function Page() {
   return (
     <>
-      <Card />
+      <DessertsCard />
       <div className="font-[11px]  text-center">
         Challenge by{" "}
         <a
