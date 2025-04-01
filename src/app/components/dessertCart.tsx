@@ -108,7 +108,6 @@ function Button() {
       type="button"
       className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
       <span>
-        
         <img src="/assets/images/icon-add-to-cart.svg" alt="icon" />
       </span>
       Add To Cart
@@ -118,7 +117,7 @@ function Button() {
 export default function DessertsCard() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold text-rose-900">Desserts</h1>
+      <h1 className="text-2xl font-bold text-rose-900 m-2.5">Desserts</h1>
       <div className="grid grid-cols-3 gap-4">
         {data.map((item, index) => (
           <div key={index}>
