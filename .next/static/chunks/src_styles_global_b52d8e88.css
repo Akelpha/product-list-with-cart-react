@@ -67,6 +67,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-lg: .5rem;
@@ -377,10 +379,6 @@
     margin: calc(var(--spacing) * 2);
   }
 
-  .m-2\.5 {
-    margin: calc(var(--spacing) * 2.5);
-  }
-
   .mx-auto {
     margin-inline: auto;
   }
@@ -429,6 +427,10 @@
     height: 45px;
   }
 
+  .h-\[50px\] {
+    height: 50px;
+  }
+
   .h-\[230px\] {
     height: 230px;
   }
@@ -443,6 +445,14 @@
 
   .w-\[90\%\] {
     width: 90%;
+  }
+
+  .w-\[100px\] {
+    width: 100px;
+  }
+
+  .w-\[150px\] {
+    width: 150px;
   }
 
   .w-\[280px\] {
@@ -570,6 +580,30 @@
     padding: calc(var(--spacing) * 2);
   }
 
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
+
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
+
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+
+  .pb-3\.5 {
+    padding-bottom: calc(var(--spacing) * 3.5);
+  }
+
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
+  }
+
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
+  }
+
   .text-center {
     text-align: center;
   }
@@ -590,6 +624,11 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
 
   .text-lg {
@@ -627,6 +666,10 @@
 
   .text-rose-400 {
     color: var(--color-rose-400);
+  }
+
+  .text-rose-500 {
+    color: var(--color-rose-500);
   }
 
   .text-rose-900 {
@@ -715,6 +758,18 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .hover\:border-red:hover {
+      border-color: var(--color-red);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-red:hover {
+      color: var(--color-red);
+    }
   }
 
   .focus\:bg-red:focus {

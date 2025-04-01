@@ -1,5 +1,6 @@
 import React from "react";
 import ResponsiveImage from "./responsiveImage";
+import Image from 'next/image'
 const data = [
   {
     image: {
@@ -106,9 +107,15 @@ function Button() {
   return (
     <button
       type="button"
-      className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
+      className="border-2 rounded-xl w-[150px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red  flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
       <span>
-        <img src="/assets/images/icon-add-to-cart.svg" alt="icon" />
+        <Image
+          src="/assets/images/icon-add-to-cart.svg"
+          alt="Add to Cart Icon"
+          width={25}
+          height={25}
+          className="object-cover rounded-2xl"
+        />
       </span>
       Add To Cart
     </button>
@@ -117,7 +124,7 @@ function Button() {
 export default function DessertsCard() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold text-rose-900 m-2.5">Desserts</h1>
+      <h1 className="text-4xl font-bold text-rose-900 pl-4 pb-3.5">Desserts</h1>
       <div className="grid grid-cols-3 gap-4">
         {data.map((item, index) => (
           <div key={index}>
