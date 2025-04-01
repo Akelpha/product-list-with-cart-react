@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { redHatText } from "app/font";
 // These styles apply to every route in the application
 import "@/styles/global.css";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-rose-50 font-redHatText">{children}</body>
+      <body className={`${redHatText.className}bg-rose-50 `}>{children}</body>
     </html>
   );
 }

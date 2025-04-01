@@ -108,6 +108,7 @@ function Button() {
       type="button"
       className="border rounded-xl w-[25%] h-[45px] border-rose-500 focus:bg-red flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
       <span>
+        
         <img src="/assets/images/icon-add-to-cart.svg" alt="icon" />
       </span>
       Add To Cart

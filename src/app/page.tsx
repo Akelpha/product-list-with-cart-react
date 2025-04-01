@@ -4,8 +4,11 @@ import CommandCart from "./components/commandCart";
 export default function Page() {
   return (
     <>
-      <DessertsCard />
-      <CommandCart />
+      <section className="flex flex-row  gap-4 w-[90%] mx-auto mt-10">
+        <DessertsCard />
+        <CommandCart />
+      </section>
+
       <div className="font-[11px]  text-center">
         Challenge by{" "}
         <a

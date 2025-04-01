@@ -42,6 +42,8 @@
     --color-blue-800: oklch(.424 .199 265.638);
     --color-blue-900: oklch(.379 .146 265.522);
     --color-rose-50: #fcf9f7;
+    --color-rose-200: oklch(.892 .058 10.001);
+    --color-rose-400: #ad8985;
     --color-rose-500: #87635a;
     --color-rose-900: #260f08;
     --color-gray-100: oklch(.967 .003 264.542);
@@ -53,14 +55,18 @@
     --color-gray-700: oklch(.373 .034 259.733);
     --color-gray-800: oklch(.278 .033 256.848);
     --color-gray-900: oklch(.21 .034 264.665);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-lg: .5rem;
     --radius-xl: .75rem;
@@ -410,6 +416,10 @@
     height: 45px;
   }
 
+  .h-\[200px\] {
+    height: 200px;
+  }
+
   .h-\[300px\] {
     height: 300px;
   }
@@ -420,6 +430,10 @@
 
   .w-\[90\%\] {
     width: 90%;
+  }
+
+  .w-\[250px\] {
+    width: 250px;
   }
 
   .w-full {
@@ -458,6 +472,10 @@
     flex-direction: column;
   }
 
+  .flex-row {
+    flex-direction: row;
+  }
+
   .items-center {
     align-items: center;
   }
@@ -482,6 +500,10 @@
     border-radius: var(--radius-2xl);
   }
 
+  .rounded-full {
+    border-radius: 3.40282e38px;
+  }
+
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -499,6 +521,14 @@
     border-color: var(--color-rose-500);
   }
 
+  .bg-black {
+    background-color: var(--color-black);
+  }
+
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+
   .bg-rose-50 {
     background-color: var(--color-rose-50);
   }
@@ -513,6 +543,10 @@
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
 
   .text-center {
@@ -542,6 +576,11 @@
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
 
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
   .font-\[11px\] {
     --tw-font-weight: 11px;
     font-weight: 11px;
@@ -552,6 +591,11 @@
     font-weight: var(--font-weight-bold);
   }
 
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
   .text-\[\#3e52a3\] {
     color: #3e52a3;
   }
@@ -560,8 +604,16 @@
     color: var(--color-red);
   }
 
+  .text-rose-400 {
+    color: var(--color-rose-400);
+  }
+
   .text-rose-900 {
     color: var(--color-rose-900);
+  }
+
+  .text-white {
+    color: var(--color-white);
   }
 
   .lowercase {
@@ -590,6 +642,20 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, #0000001a), 0 8px 10px -6px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-xs {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0000000d);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-rose-200 {
+    --tw-shadow-color: var(--color-rose-200);
+  }
+
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -613,6 +679,11 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .duration-300 {
+    --tw-duration: .3s;
+    transition-duration: .3s;
   }
 
   .ease-in-out {
@@ -835,6 +906,11 @@
 }
 
 @property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-duration {
   syntax: "*";
   inherits: false
 }
