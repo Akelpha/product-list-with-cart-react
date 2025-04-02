@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CommandCart() {
   return (
-    <div className="bg-white flex flex-col justify-center items-center gap-4 w-[280px] h-[230px] rounded-xl  shadow-xs mt-8">
+    <div className="bg-white flex flex-col justify-center items-center gap-4 w-[300px] h-[250px] rounded-xl  shadow-xs mt-8">
       <h2 className="text-lg font-bold text-red">
         Your Cart <span>(0)</span>
       </h2>

@@ -107,7 +107,7 @@ function Button() {
   return (
     <button
       type="button"
-      className="border-2 rounded-xl w-[150px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red  flex justify-center items-center gap-2.5 absolute top-2 right-2 bg-white">
+      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red  flex justify-center items-center absolute inset-x-25 -bottom-7.5 bg-white">
       <span>
         <Image
           src="/assets/images/icon-add-to-cart.svg"
@@ -124,18 +124,20 @@ function Button() {
 export default function DessertsCard() {
   return (
     <div className="container mx-auto">
-      <h1 className="text-4xl font-bold text-rose-900 pl-4 pb-3.5">Desserts</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <h1 className="text-4xl font-bold text-rose-900 pl-6.5 pb-3.5">Desserts</h1>
+      <div className="grid grid-cols-3 gap-4 ">
         {data.map((item, index) => (
-          <div key={index}>
-            <section className="relative flex justify-center items-center">
+          <div key={index} className=" flex flex-col  ">
+            <section className="relative flex justify-center ">
               <ResponsiveImage src={item.image} alt={item.name} />
               <Button />
             </section>
+            <article className="text-justify mt-4 pl-6.5">
+              <p className="text-rose-400 font-medium text-sm">{item.category}</p>
+              <h2 className="text-xl font-bold text-rose-900">{item.name}</h2>
+              <p className="text-red font-medium text-sm">${item.price}</p>
+            </article>
 
-            <p>{item.category}</p>
-            <h2>{item.name}</h2>
-            <p>${item.price}</p>
           </div>
         ))}
       </div>

@@ -34,6 +34,7 @@ export default function ResponsiveImage({ src, alt }: ResponsiveImageProps) {
       alt={alt}
       width={300}
       height={300}
+      priority={false}
       className="object-cover rounded-2xl"
     />
   );

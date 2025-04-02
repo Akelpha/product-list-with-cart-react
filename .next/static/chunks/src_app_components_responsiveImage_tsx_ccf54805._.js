@@ -41,6 +41,7 @@ function ResponsiveImage({ src, alt }) {
         alt: alt,
         width: 300,
         height: 300,
+        priority: false,
         className: "object-cover rounded-2xl"
     }, void 0, false, {
         fileName: "[project]/src/app/components/responsiveImage.tsx",
