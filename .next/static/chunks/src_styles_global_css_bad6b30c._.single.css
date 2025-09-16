@@ -597,6 +597,10 @@
     top: calc(var(--spacing) * 2);
   }
 
+  .top-full {
+    top: 100%;
+  }
+
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
@@ -627,6 +631,10 @@
 
   .bottom-2 {
     bottom: calc(var(--spacing) * 2);
+  }
+
+  .left-\[50\%\] {
+    left: 50%;
   }
 
   .\!container {

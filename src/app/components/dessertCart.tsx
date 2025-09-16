@@ -107,7 +107,7 @@ function Button() {
   return (
     <button
       type="button"
-      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red  flex justify-center items-center absolute inset-x-25 -bottom-7.5 bg-white">
+      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red flex justify-center items-center absolute top-full left-[50%] bg-white">
       <span>
         <Image
           src="/assets/images/icon-add-to-cart.svg"
