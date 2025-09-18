@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React,{ useEffect, useState } from "react";
 import ResponsiveImage from "./responsiveImage";
 import Image from 'next/image'
 const data = [
@@ -102,25 +103,80 @@ const data = [
     price: 6.5,
   },
 ];
+// TO DO : Instead of having this button component like this,  try to implement a conditional function that will take the two part of the button
+// Tu déclares ton état en haut du composant :
 
+// const [isAdded, setIsAdded] = useState(false);
+
+
+// Ensuite, dans le return, tu fais le rendu conditionnel :
+
+// return (
+//   <button>
+//     {isAdded ? (
+      // Ici le JSX pour le compteur ( + , -, nombre )
+//     ) : (
+      // Ici le JSX pour Add to Cart + icône
+//     )}
+//   </button>
+// );
 function Button() {
+const [changeButtonStyle,setChangeButtonStyle] = useState('text-rose-900 bg-white');
+const click = () => {
+  setChangeButtonStyle('text-white bg-rose-900')
+}
+useEffect(() => {
+  document.querySelector('button')?.addEventListener('click', click){
+    return () => {
+      button.style.background = 'bg-rose-900';
+      button.style.color = 'text-white';
+  };
+  },[]);
+function CounterDessert (){
+  const [countDessert, setCountDessert] = useState(0);
+  const incrementDessert = () => { 
+    setCountDessert(countDessert + 1)
+  }
+  const decrementDessert = () => {
+    setCountDessert(countDessert - 1)
+  }
+} 
   return (
     <button
       type="button"
-      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red hover:text-red flex justify-center items-center absolute top-full left-[50%] bg-white">
+      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"
+      onClick={CounterDessert}>
       <span>
         <Image
           src="/assets/images/icon-add-to-cart.svg"
           alt="Add to Cart Icon"
           width={25}
           height={25}
-          className="object-cover rounded-2xl"
+          className="object-cover pr-2"
+        />
+      </span>
+      <span className="hidden">
+        <Image
+        src="/assets/images/icon-decrement-quantity.svg"
+        alt="Minus Icon"
+        width={25}
+        height={25}
         />
       </span>
       Add To Cart
+       <span className="hidden">
+        <Image
+        src="/assets/images/icon-increment-quantity.svg"
+        alt="Plus Icon"
+        width={25}
+        height={25}
+        />
+       </span>
     </button>
   );
 }
+
+
 export default function DessertsCard() {
   return (
     <div className="container mx-auto">
@@ -128,13 +184,13 @@ export default function DessertsCard() {
       <div className="grid grid-cols-3 gap-4 ">
         {data.map((item, index) => (
           <div key={index} className=" flex flex-col  ">
-            <section className="relative flex justify-center ">
+            <section className="relative flex justify-center items-center">
               <ResponsiveImage src={item.image} alt={item.name} />
               <Button />
             </section>
-            <article className="text-justify mt-4 pl-6.5">
+            <article className="text-justify mt-6 pl-6.5 ">
               <p className="text-rose-400 font-medium text-sm">{item.category}</p>
-              <h2 className="text-xl font-bold text-rose-900">{item.name}</h2>
+              <h2 className="text-xl font-bold text-rose-900 ">{item.name}</h2>
               <p className="text-red font-medium text-sm">${item.price}</p>
             </article>
 
