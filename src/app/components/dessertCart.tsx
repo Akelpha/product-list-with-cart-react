@@ -106,75 +106,57 @@ const data = [
 // TO DO : Instead of having this button component like this,  try to implement a conditional function that will take the two part of the button
 // Tu déclares ton état en haut du composant :
 
-// const [isAdded, setIsAdded] = useState(false);
 
-
-// Ensuite, dans le return, tu fais le rendu conditionnel :
-
-// return (
-//   <button>
-//     {isAdded ? (
-      // Ici le JSX pour le compteur ( + , -, nombre )
-//     ) : (
-      // Ici le JSX pour Add to Cart + icône
-//     )}
-//   </button>
-// );
 function Button() {
-const [changeButtonStyle,setChangeButtonStyle] = useState('text-rose-900 bg-white');
-const click = () => {
-  setChangeButtonStyle('text-white bg-rose-900')
-}
-useEffect(() => {
-  document.querySelector('button')?.addEventListener('click', click){
-    return () => {
-      button.style.background = 'bg-rose-900';
-      button.style.color = 'text-white';
-  };
-  },[]);
-function CounterDessert (){
+  const [isAdded, setIsAdded] = useState(false);
+  const [count, setCount] = useState(0);
   const [countDessert, setCountDessert] = useState(0);
   const incrementDessert = () => { 
     setCountDessert(countDessert + 1)
   }
   const decrementDessert = () => {
-    setCountDessert(countDessert - 1)
-  }
-} 
-  return (
-    <button
-      type="button"
-      className="border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"
-      onClick={CounterDessert}>
-      <span>
-        <Image
-          src="/assets/images/icon-add-to-cart.svg"
-          alt="Add to Cart Icon"
-          width={25}
-          height={25}
-          className="object-cover pr-2"
-        />
-      </span>
-      <span className="hidden">
-        <Image
-        src="/assets/images/icon-decrement-quantity.svg"
-        alt="Minus Icon"
-        width={25}
-        height={25}
-        />
-      </span>
-      Add To Cart
-       <span className="hidden">
-        <Image
-        src="/assets/images/icon-increment-quantity.svg"
-        alt="Plus Icon"
-        width={25}
-        height={25}
-        />
-       </span>
-    </button>
-  );
-}
+    setCountDessert(countDessert - 1)}
+  
+   return (
+     <button type="button" className={isAdded ? "border-2 rounded-4xl w-[170px] h-[50px] text-white border-red bg-red flex justify-center items-center absolute top-[90%] left-[20%]" : "border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"} onClick={() => setIsAdded(!isAdded)}>
+          {isAdded ? (
+      <>
+          <span onClick={decrementDessert}>
+          <Image
+          src="/assets/images/icon-decrement-quantity.svg"
+          alt="Minus Icon"
+          width={25}
+          height={25}
+          />
+       </span>
+        <span className="mx-2">{count}</span>
+       <span onClick={incrementDessert}>
+        <Image
+        src="/assets/images/icon-increment-quantity.svg"
+        alt="Plus Icon"
+        width={25}
+        height={25}
+        />
+       </span></>
+
+    ) : (
+      <>
+         <span>
+        <Image
+          src="/assets/images/icon-add-to-cart.svg"
+          alt="Add to Cart Icon"
+          width={25}
+          height={25}
+          className="object-cover pr-2"
+        />
+      </span>
+        Add To Cart
+      </>   
+    )}
+     </button>
+        
+   ) 
+   };
 
 
 export default function DessertsCard() {

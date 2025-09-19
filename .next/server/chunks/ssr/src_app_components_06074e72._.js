@@ -163,11 +163,42 @@ const data = [
         price: 6.5
     }
 ];
-const changeButtonStyle = {
-    notClicked: 'bg-white text-rose-900',
-    clicked: 'bg-rose-900 text-white'
-};
-function CounterDessert() {
+// TO DO : Instead of having this button component like this,  try to implement a conditional function that will take the two part of the button
+// Tu déclares ton état en haut du composant :
+// const [isAdded, setIsAdded] = useState(false);
+// Ensuite, dans le return, tu fais le rendu conditionnel :
+// return (
+//   <button>
+//     {isAdded ? (
+// Ici le JSX pour le compteur ( + , -, nombre )
+//     ) : (
+// Ici le JSX pour Add to Cart + icône
+//     )}
+//   </button>
+// );
+// const [changeButtonStyle,setChangeButtonStyle] = useState('text-rose-900 bg-white');
+// const click = () => {
+//   setChangeButtonStyle('text-white bg-rose-900')
+// }
+// useEffect(() => {
+//   document.querySelector('button')?.addEventListener('click', click){
+//     return () => {
+//       button.style.background = 'bg-rose-900';
+//       button.style.color = 'text-white';
+//   };
+//   },[]);
+// function CounterDessert (){
+//   const [countDessert, setCountDessert] = useState(0);
+//   const incrementDessert = () => { 
+//     setCountDessert(countDessert + 1)
+//   }
+//   const decrementDessert = () => {
+//     setCountDessert(countDessert - 1)
+//   }
+// } 
+function Button() {
+    const [isAdded, setIsAdded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [count, setCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [countDessert, setCountDessert] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const incrementDessert = ()=>{
         setCountDessert(countDessert + 1);
@@ -175,70 +206,97 @@ function CounterDessert() {
     const decrementDessert = ()=>{
         setCountDessert(countDessert - 1);
     };
-}
-function Button() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         type: "button",
-        className: "border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white",
-        onClick: CounterDessert,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    src: "/assets/images/icon-add-to-cart.svg",
-                    alt: "Add to Cart Icon",
-                    width: 25,
-                    height: 25,
-                    className: "object-cover pr-2"
+        className: isAdded ? "border-2 rounded-4xl w-[170px] h-[50px] text-white border-red bg-red flex justify-center items-center absolute top-[90%] left-[20%]" : "border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white",
+        onClick: ()=>setIsAdded(!isAdded),
+        children: isAdded ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: [
+                "          ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    onClick: decrementDessert,
+                    children: [
+                        "          ",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/assets/images/icon-decrement-quantity.svg",
+                            alt: "Minus Icon",
+                            width: 25,
+                            height: 25
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/dessertCart.tsx",
+                            lineNumber: 160,
+                            columnNumber: 11
+                        }, this),
+                        "       "
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/components/dessertCart.tsx",
+                    lineNumber: 159,
+                    columnNumber: 11
+                }, this),
+                "        ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "mx-2",
+                    children: count
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/dessertCart.tsx",
-                    lineNumber: 128,
+                    lineNumber: 167,
                     columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/components/dessertCart.tsx",
-                lineNumber: 127,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "hidden",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    src: "/assets/images/icon-decrement-quantity.svg",
-                    alt: "Minus Icon",
-                    width: 25,
-                    height: 25
-                }, void 0, false, {
+                }, this),
+                "       ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    onClick: incrementDessert,
+                    children: [
+                        "        ",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/assets/images/icon-increment-quantity.svg",
+                            alt: "Plus Icon",
+                            width: 25,
+                            height: 25
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/dessertCart.tsx",
+                            lineNumber: 169,
+                            columnNumber: 9
+                        }, this),
+                        "       "
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/src/app/components/dessertCart.tsx",
-                    lineNumber: 137,
-                    columnNumber: 9
+                    lineNumber: 168,
+                    columnNumber: 8
                 }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/components/dessertCart.tsx",
-                lineNumber: 136,
-                columnNumber: 7
-            }, this),
-            "Add To Cart",
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "hidden",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    src: "/assets/images/icon-increment-quantity.svg",
-                    alt: "Minus Icon",
-                    width: 25,
-                    height: 25
-                }, void 0, false, {
+            ]
+        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: [
+                "         ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    children: [
+                        "        ",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/assets/images/icon-add-to-cart.svg",
+                            alt: "Add to Cart Icon",
+                            width: 25,
+                            height: 25,
+                            className: "object-cover pr-2"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/dessertCart.tsx",
+                            lineNumber: 180,
+                            columnNumber: 9
+                        }, this),
+                        "      "
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/src/app/components/dessertCart.tsx",
-                    lineNumber: 146,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/src/app/components/dessertCart.tsx",
-                lineNumber: 145,
-                columnNumber: 8
-            }, this)
-        ]
-    }, void 0, true, {
+                    lineNumber: 179,
+                    columnNumber: 10
+                }, this),
+                "        Add To Cart       "
+            ]
+        }, void 0, true)
+    }, void 0, false, {
         fileName: "[project]/src/app/components/dessertCart.tsx",
-        lineNumber: 123,
-        columnNumber: 5
+        lineNumber: 156,
+        columnNumber: 6
     }, this);
 }
 function DessertsCard() {
@@ -250,7 +308,7 @@ function DessertsCard() {
                 children: "Desserts"
             }, void 0, false, {
                 fileName: "[project]/src/app/components/dessertCart.tsx",
-                lineNumber: 161,
+                lineNumber: 200,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -266,18 +324,18 @@ function DessertsCard() {
                                         alt: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 205,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {}, void 0, false, {
                                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 206,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/dessertCart.tsx",
-                                lineNumber: 165,
+                                lineNumber: 204,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -288,7 +346,7 @@ function DessertsCard() {
                                         children: item.category
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                                        lineNumber: 170,
+                                        lineNumber: 209,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -296,7 +354,7 @@ function DessertsCard() {
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 210,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -307,30 +365,30 @@ function DessertsCard() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 211,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/components/dessertCart.tsx",
-                                lineNumber: 169,
+                                lineNumber: 208,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/src/app/components/dessertCart.tsx",
-                        lineNumber: 164,
+                        lineNumber: 203,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/components/dessertCart.tsx",
-                lineNumber: 162,
+                lineNumber: 201,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/dessertCart.tsx",
-        lineNumber: 160,
+        lineNumber: 199,
         columnNumber: 5
     }, this);
 }

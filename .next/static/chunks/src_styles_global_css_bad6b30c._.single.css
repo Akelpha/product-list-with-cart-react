@@ -65,7 +65,6 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
     --radius-4xl: 2rem;
@@ -477,6 +476,10 @@
     }
   }
 
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+
   .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -504,10 +507,6 @@
 
   .grid {
     display: grid;
-  }
-
-  .hidden {
-    display: none;
   }
 
   .table {
@@ -575,8 +574,16 @@
     border-width: 2px;
   }
 
+  .border-red {
+    border-color: var(--color-red);
+  }
+
   .border-rose-500 {
     border-color: var(--color-rose-500);
+  }
+
+  .bg-red {
+    background-color: var(--color-red);
   }
 
   .bg-rose-100 {
@@ -688,13 +695,6 @@
   @media (hover: hover) {
     .hover\:border-red:hover {
       border-color: var(--color-red);
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:font-extrabold:hover {
-      --tw-font-weight: var(--font-weight-extrabold);
-      font-weight: var(--font-weight-extrabold);
     }
   }
 }
