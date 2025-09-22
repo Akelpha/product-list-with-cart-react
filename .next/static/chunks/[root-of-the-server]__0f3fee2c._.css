@@ -115,6 +115,7 @@
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
@@ -122,6 +123,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-red: #c73a0f;
+    --font-redHatText: "Red Hat Text", sans-serif;
   }
 }
 
@@ -473,6 +475,18 @@
 @layer components;
 
 @layer utilities {
+  .sr-only {
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -662,10 +676,6 @@
     object-fit: cover;
   }
 
-  .p-0\.5 {
-    padding: calc(var(--spacing) * .5);
-  }
-
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
@@ -688,6 +698,10 @@
 
   .text-justify {
     text-align: justify;
+  }
+
+  .font-redHatText {
+    font-family: var(--font-redHatText);
   }
 
   .text-4xl {
@@ -720,6 +734,31 @@
     font-weight: 11px;
   }
 
+  .font-\[12px\] {
+    --tw-font-weight: 12px;
+    font-weight: 12px;
+  }
+
+  .font-\[520\] {
+    --tw-font-weight: 520;
+    font-weight: 520;
+  }
+
+  .font-\[530\] {
+    --tw-font-weight: 530;
+    font-weight: 530;
+  }
+
+  .font-\[550\] {
+    --tw-font-weight: 550;
+    font-weight: 550;
+  }
+
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
+
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -728,6 +767,11 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
 
   .text-\[\#3e52a3\] {
@@ -775,12 +819,6 @@
   @media (hover: hover) {
     .hover\:fill-red:hover {
       fill: var(--color-red);
-    }
-  }
-
-  @media (hover: hover) {
-    .hover\:text-red:hover {
-      color: var(--color-red);
     }
   }
 }

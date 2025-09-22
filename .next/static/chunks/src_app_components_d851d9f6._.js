@@ -241,7 +241,7 @@ function Button() {
                             alt: "Plus Icon",
                             width: 15,
                             height: 15,
-                            className: "object-cover border-1 border-white rounded-full p-1 hover:bg-white hover:fill-red "
+                            className: "object-cover border-1 border-white rounded-full p-1 hover:bg-white "
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/dessertCart.tsx",
                             lineNumber: 140,
@@ -262,34 +262,29 @@ function Button() {
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             type: "button",
-            className: "border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white",
+            className: "border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 font-[600] border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white",
             onClick: ()=>{
                 setIsAdded(true), setCountDessert(1);
             },
             children: [
-                "                  ",
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    children: [
-                        "         ",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: "/assets/images/icon-add-to-cart.svg",
-                            alt: "Add to Cart Icon",
-                            width: 25,
-                            height: 25,
-                            className: "object-cover pr-2"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/components/dessertCart.tsx",
-                            lineNumber: 153,
-                            columnNumber: 10
-                        }, this),
-                        "      "
-                    ]
-                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        src: "/assets/images/icon-add-to-cart.svg",
+                        alt: "Add to Cart Icon",
+                        width: 25,
+                        height: 25,
+                        className: "object-cover pr-2"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/dessertCart.tsx",
+                        lineNumber: 153,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/src/app/components/dessertCart.tsx",
                     lineNumber: 152,
-                    columnNumber: 10
+                    columnNumber: 11
                 }, this),
-                "        Add To Cart       "
+                "Add to Cart"
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/components/dessertCart.tsx",

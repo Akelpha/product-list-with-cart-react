@@ -142,24 +142,24 @@ setCountDessert(countDessert - 1)
         alt="Plus Icon"
         width={15}
         height={15}
-        className="object-cover border-1 border-white rounded-full p-1 hover:bg-white hover:fill-red "/>
+        className="object-cover border-1 border-white rounded-full p-1 hover:bg-white "/>
 {/* TO DO: Arrange the button for giving it the same appaerance like on the design */}
         </button>
       </div>
 
        ):(
-        <button type="button" className={"border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"} onClick={() => {setIsAdded(true),setCountDessert(1)}}>         
-         <span>
-         <Image
-          src="/assets/images/icon-add-to-cart.svg"
-          alt="Add to Cart Icon"
-          width={25}
-          height={25}
-          className="object-cover pr-2"
-         />
-      </span>
-        Add To Cart
-      </button> 
+        <button type="button" className={"border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 font-[600] border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"} onClick={() => {setIsAdded(true),setCountDessert(1)}}>
+          <span>
+            <Image
+            src={"/assets/images/icon-add-to-cart.svg"}
+            alt="Add to Cart Icon"
+            width={25}
+            height={25}
+            className="object-cover pr-2"
+            />
+          </span>
+          Add to Cart
+        </button>
        )}
       </>
        

@@ -8,8 +8,7 @@ module.exports = {
             },
         ],
        
-  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
 
-        domains: [], // Si tu as des images hébergées ailleurs
+        domains: [], 
     },
 };
