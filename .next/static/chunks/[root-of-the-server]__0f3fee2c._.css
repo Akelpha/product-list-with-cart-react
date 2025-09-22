@@ -616,8 +616,17 @@
     border-radius: var(--radius-4xl);
   }
 
+  .rounded-full {
+    border-radius: 3.40282e38px;
+  }
+
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
 
   .border-2 {
@@ -633,6 +642,10 @@
     border-color: var(--color-rose-500);
   }
 
+  .border-white {
+    border-color: var(--color-white);
+  }
+
   .bg-red {
     background-color: var(--color-red);
   }
@@ -641,16 +654,20 @@
     background-color: var(--color-rose-100);
   }
 
-  .bg-rose-900 {
-    background-color: var(--color-rose-900);
-  }
-
   .bg-white {
     background-color: var(--color-white);
   }
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .p-0\.5 {
+    padding: calc(var(--spacing) * .5);
+  }
+
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
 
   .pr-2 {
@@ -746,6 +763,24 @@
   @media (hover: hover) {
     .hover\:border-red:hover {
       border-color: var(--color-red);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-white:hover {
+      background-color: var(--color-white);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:fill-red:hover {
+      fill: var(--color-red);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-red:hover {
+      color: var(--color-red);
     }
   }
 }

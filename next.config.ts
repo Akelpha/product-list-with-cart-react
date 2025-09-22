@@ -7,6 +7,9 @@ module.exports = {
                 hostname: '**',
             },
         ],
+       
+  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+
         domains: [], // Si tu as des images hébergées ailleurs
     },
 };
