@@ -1,5 +1,5 @@
 'use client'
-import React,{ useEffect, useState } from "react";
+import React,{ useState } from "react";
 import ResponsiveImage from "./responsiveImage";
 import Image from 'next/image'
 const data = [
@@ -120,7 +120,7 @@ setCountDessert(countDessert - 1)
     }
     
     }
-  
+  // TODO : Arrange the button for giving it the same appaerance like on the design
      return (
       <>
       {isAdded ? (
@@ -143,12 +143,12 @@ setCountDessert(countDessert - 1)
         width={15}
         height={15}
         className="object-cover border-1 border-white rounded-full p-1 hover:bg-white "/>
-{/* TO DO: Arrange the button for giving it the same appaerance like on the design */}
+
         </button>
       </div>
 
        ):(
-        <button type="button" className={"border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 font-[600] border-rose-500 hover:border-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"} onClick={() => {setIsAdded(true),setCountDessert(1)}}>
+        <button type="button" className={"border-2 rounded-4xl w-[170px] h-[50px] text-rose-900 font-[600] border-rose-500 hover:border-red hover:text-red flex justify-center items-center absolute top-[90%] left-[20%] bg-white"} onClick={() => {setIsAdded(true),setCountDessert(1)}}>
           <span>
             <Image
             src={"/assets/images/icon-add-to-cart.svg"}
@@ -174,7 +174,7 @@ export default function DessertsCard() {
         {data.map((item, index) => (
           <div key={index} className=" flex flex-col  ">
             <section className="relative flex justify-center items-center">
-              <ResponsiveImage src={item.image} alt={item.name} />
+              <ResponsiveImage src={item.image} alt={item.name}/>
               <Button />
             </section>
             <article className="text-justify mt-6 pl-6.5 ">

@@ -27,7 +27,7 @@ export default function ResponsiveImage({ src, alt }: ResponsiveImageProps) {
   } else if (isDesktop) {
     imageSrc = src.desktop;
   }
-
+// TODO: Add outline to the imafe when you click on the button
   return (
     <Image
       src={imageSrc}
@@ -35,7 +35,7 @@ export default function ResponsiveImage({ src, alt }: ResponsiveImageProps) {
       width={300}
       height={300}
       priority={false}
-      className="object-cover rounded-2xl"
+      className="object-cover rounded-2xl "
     />
   );
 }

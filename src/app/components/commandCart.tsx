@@ -1,9 +1,24 @@
-import React from "react";
+'use client'
+import React,{ useState } from "react";
 import Image from "next/image";
+// import DessertsCard from "./dessertCart";
+function CommandCart() {
+  const [isDessertAdded, setisDessertAdded] = useState(false);
+  const [countAddedDessert, setCountAddedDessert] = useState(0);
+  
 
-export default function CommandCart() {
+
   return (
-    <div className="bg-white flex flex-col justify-center items-center gap-4 w-[350px] h-[250px] rounded-xl  shadow-xs mt-8">
+    <>
+    {isDessertAdded ? (<div className="bg-white flex flex-col justify-center items-center gap-4 w-[350px] h-[250px] rounded-xl shadow-xs mt-8">
+      <h2 className="text-lg font-bold text-red">
+        Your Cart <span>{countAddedDessert}</span>
+      </h2>
+      <p className="text-rose-400 font-medium text-xs">
+        Your added items will appear here.
+      </p>
+    </div>):(
+      <div className="bg-white flex flex-col justify-center items-center gap-4 w-[350px] h-[250px] rounded-xl shadow-xs mt-8">
       <h2 className="text-lg font-bold text-red">
         Your Cart <span>(0)</span>
       </h2>
@@ -18,6 +33,15 @@ export default function CommandCart() {
       <p className="text-rose-400 font-medium text-xs">
         Your added items will appear here.
       </p>
-    </div>
+    </div>)
+  }
+    </>
+    
+  );
+}
+export default function Command() {
+
+  return (
+    <CommandCart />
   );
 }
